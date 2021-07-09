@@ -9,7 +9,15 @@ function StarrySky() {
     }
     return stars;
   };
-  return <div className="night-sky">{addStars(30)}</div>;
+  return (
+    <div className="night-sky">
+      {addStars(30)}
+      <ShootingStar />
+      <ShootingStar />
+      <ShootingStar />
+      <ShootingStar />
+    </div>
+  );
 }
 
 function Star() {
@@ -20,6 +28,19 @@ function Star() {
         /* prettier-ignore */ animation: `twinkle ${( Math.random() * 5 + 3).toString()}s linear infinite`,
         top: `${Math.random() * window.innerHeight}px`,
         left: `${Math.random() * window.innerWidth}px`,
+      }}
+    ></div>
+  );
+}
+
+function ShootingStar() {
+  return (
+    <div
+      className="shooting-star"
+      style={{
+        /* prettier-ignore */ animation: `falling-trajectory ${(Math.random() * 30 + 2).toString()}s linear infinite`,
+        top: `${Math.random() * (window.innerHeight - 300 - 50) + 10}px`,
+        left: `${Math.random() * (window.innerWidth - 300 - 50) + 10}px`,
       }}
     ></div>
   );
