@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  /*   background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  width: 95%;
+  height: 85%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(1px);
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 22px 4px rgba(255, 255, 255, 0.33);
+  box-shadow: 0px 0px 22px 4px rgba(255, 255, 255, 0.33);
+  animation: floating 20s ease-in-out infinite;
+}
+
+/* Floating animation */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  33% {
+    transform: translateY(-20px);
+  }
+
+  66% {
+    transform: translateY(20px);
+  }
+  /* It stops 1px before to avoid strange teleports or stopping to long at the starting position */
+  100% {
+    transform: translateY(1px);
+  }
+}
