@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.panel {
+/* .panel {
   width: 95%;
   height: 85%;
   background: rgba(255, 255, 255, 0.2);
@@ -16,6 +16,83 @@
   -webkit-box-shadow: 0px 0px 22px 4px rgba(255, 255, 255, 0.33);
   box-shadow: 0px 0px 22px 4px rgba(255, 255, 255, 0.33);
   animation: floating 20s ease-in-out infinite;
+}
+ */
+
+.project-slide {
+  display: grid;
+  grid-template-columns: 100fr;
+  gap: 1rem;
+}
+
+.project-media {
+  background: gray;
+  justify-self: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 5px solid gray;
+  animation: floating 10s ease-in-out infinite;
+}
+
+.project-title {
+  margin: 0 0 5px 0;
+  padding: 0;
+  /* width: 100%; */
+}
+
+.project-img {
+  align-self: center;
+  min-width: 100%;
+  min-height: 200px;
+}
+
+.project-tools {
+  text-transform: uppercase;
+  text-justify: inter-word;
+}
+
+/* custom btns (I may cmake this the basic style 4 all btns) */
+
+.project-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-buttons > button {
+  padding: 0 5px;
+  border: none;
+  border-radius: 10px;
+  background: grey;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 100;
+  /* letter-spacing: 0; */
+  transition-duration: 500ms;
+}
+
+.project-buttons > button:hover {
+  font-weight: 700;
+  /*  letter-spacing: 2px; */
+}
+
+.project-buttons > button::before,
+.project-buttons > button::after {
+  display: block;
+  content: '';
+  margin: 5px auto;
+  width: 0;
+  border: 1px solid white;
+  transition-duration: 350ms;
+  opacity: 0;
+}
+
+.project-buttons > button:hover::before,
+.project-buttons > button:hover::after {
+  width: 70%;
+  transition-duration: 350ms;
+  opacity: 1;
 }
 
 /* Floating animation */
@@ -26,11 +103,11 @@
   }
 
   33% {
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
 
   66% {
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   /* It stops 1px before to avoid strange teleports or stopping to long at the starting position */
   100% {

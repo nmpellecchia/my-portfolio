@@ -5,8 +5,9 @@ import GlassPanel from './components/windows/GlassPanel';
 function App() {
   return (
     <div className="App">
-      <GlassPanel></GlassPanel>
-      {/* <p>A</p> */}
+      <GlassPanel type="text">
+        <p>Hola amigos</p>
+      </GlassPanel>
       {/* BG needs to be the last element and be fixed */}
       <StarrySky />
     </div>
