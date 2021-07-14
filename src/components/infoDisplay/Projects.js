@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import './GlassPanel.css';
+import './Projects.css';
 
 /* props with className "type" if it's text css will have different styling than mosaics grid */
 /* projects and mosaics for techs, make them b&w. colors when hovered */

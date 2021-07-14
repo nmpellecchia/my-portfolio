@@ -1,6 +1,6 @@
 import './App.css';
 import StarrySky from './components/background/StarrySky.js';
-import GlassPanel from './components/windows/GlassPanel';
+import GlassPanel from './components/infoDisplay/Projects';
 
 function App() {
   return (
