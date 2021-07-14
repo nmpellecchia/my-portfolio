@@ -4,34 +4,49 @@ import './Projects.css';
 /* props with className "type" if it's text css will have different styling than mosaics grid */
 /* projects and mosaics for techs, make them b&w. colors when hovered */
 function GlassPanel(props) {
+  /* const projects = [];
+  for (let i = 0; i < props.projects.length - 1; i++) {
+    projects.push(
+      <ProjectSlide key={`project-${i}`} project={props.project[i]} />
+    );
+  } */
   return (
     <div className="container">
       {/* use props.children to pass children */}
-      <section className={` ${props.type}`}>
+      <section>
         {/* props.children */}
-        <ProjectSlide />
+        {/* <ProjectSlide project={props.project}/> */}
+        {props.projects.map((project, i) => {
+          return (
+            <ProjectSlide
+              key={`project-${i.toString()}`}
+              project={project}
+              index={i}
+            />
+          );
+        })}
       </section>
     </div>
   );
 }
 
-function ProjectSlide(props) {
+function ProjectSlide({
+  project: { title, img, tools, desc, repo_url, live_url },
+  index,
+}) {
   return (
-    <div className="project-slide">
+    <div className="project-slide" data-key={index}>
       <div className="project-media">
-        <p className="project-title">Title</p>
-        <img src="#" alt="#" className="project-img" />
+        <p className="project-title">{title}</p>
+        <img src={img} alt={title} className="project-img" />
       </div>
       <div className="project-info">
-        <p className="project-tools">js,html,css</p>
-        <p className="project-desc">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti est
-          minima ipsa, quos non voluptates laudantium.
-        </p>
+        <p className="project-tools">{tools}</p>
+        <p className="project-desc">{desc}</p>
       </div>
       <div className="project-buttons">
-        <button>View repository</button>
-        <button>View repository</button>
+        <a href={repo_url}>View repository</a>
+        <a href={live_url}>View repository</a>
         {/* Only render this btn if the project can be seen live */}
         {/* props.hasLive && <button>View live</button> */}
       </div>

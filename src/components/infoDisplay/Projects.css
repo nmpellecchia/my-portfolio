@@ -60,7 +60,7 @@
   justify-content: space-around;
 }
 
-.project-buttons > button {
+.project-buttons > a {
   padding: 0 5px;
   border: none;
   border-radius: 10px;
@@ -72,13 +72,13 @@
   transition-duration: 500ms;
 }
 
-.project-buttons > button:hover {
+.project-buttons > a:hover {
   font-weight: 700;
   /*  letter-spacing: 2px; */
 }
 
-.project-buttons > button::before,
-.project-buttons > button::after {
+.project-buttons > a::before,
+.project-buttons > a::after {
   display: block;
   content: '';
   margin: 5px auto;
@@ -88,8 +88,8 @@
   opacity: 0;
 }
 
-.project-buttons > button:hover::before,
-.project-buttons > button:hover::after {
+.project-buttons > a:hover::before,
+.project-buttons > a:hover::after {
   width: 70%;
   transition-duration: 350ms;
   opacity: 1;

@@ -20,8 +20,31 @@ const projectOne = new Project(
   'google.com',
   'google.com'
 );
-const projectTwo = new Project();
-const projectThree = new Project();
-const projectFour = new Project();
+const projectTwo = new Project(
+  'Test title',
+  '#',
+  'js,html,css',
+  testDesc,
+  'google.com',
+  'google.com'
+);
+const projectThree = new Project(
+  'Test title',
+  '#',
+  'js,html,css',
+  testDesc,
+  'google.com',
+  'google.com'
+);
+const projectFour = new Project(
+  'Test title',
+  '#',
+  'js,html,css',
+  testDesc,
+  'google.com',
+  'google.com'
+);
 
-export { projectOne };
+const projects = [projectOne, projectTwo, projectThree, projectFour];
+
+export { projects };
