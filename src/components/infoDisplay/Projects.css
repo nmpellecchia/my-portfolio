@@ -19,10 +19,17 @@
 }
  */
 
+/* Swapper content. Projects in this case */
+.projects.swapper-items {
+  margin: 10px;
+  padding: 0;
+}
+
 .project-slide {
   display: grid;
   grid-template-columns: 100fr;
   gap: 1rem;
+  text-decoration: none;
 }
 
 .project-media {
