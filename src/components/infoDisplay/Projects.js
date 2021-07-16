@@ -4,13 +4,7 @@ import './Projects.css';
 /* props with className "type" if it's text css will have different styling than mosaics grid */
 /* projects and mosaics for techs, make them b&w. colors when hovered */
 function GlassPanel(props) {
-  const [rangeVal, setRangeVal] = useState('0');
-
-  function handleChange(event) {
-    console.log(rangeVal);
-    setRangeVal(event.target.value);
-    console.log(rangeVal);
-  }
+  const [rangeVal, setRangeVal] = useState(0);
 
   return (
     <div className="container">
@@ -29,6 +23,28 @@ function GlassPanel(props) {
           title="See Projects"
           onChange={handleChange}
         /> */}
+        <div className="swapper-sliders">
+          <button
+            className="swapper-slider swapper-previous-slide"
+            disabled={rangeVal < 1}
+            onClick={() => {
+              setRangeVal(rangeVal - 1);
+            }}
+          >
+            Previous
+          </button>
+          <button
+            className="swapper-slider swapper-next-slide"
+            disabled={rangeVal == props.projects.length - 1}
+            onClick={() => {
+              setRangeVal(rangeVal + 1);
+            }}
+          >
+            Next
+          </button>
+          <p>{rangeVal}</p>
+        </div>
+        <ProjectSlide project={props.projects[rangeVal]} index="2" />
 
         {/* <ul className="projects swapper-items">
         {props.projects.map((project, i) => {
@@ -70,19 +86,5 @@ function ProjectSlide({
     </li>
   );
 }
-
-/* function SlideSwapper() {
-  return (
-    <input
-      className="swapper-slider"
-      type="range"
-      min="0"
-      max="4"
-      role="slider"
-      defaultValue="0"
-      title="See Projects"
-    />
-  );
-} */
 
 export default GlassPanel;

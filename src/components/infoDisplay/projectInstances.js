@@ -13,7 +13,7 @@ const testDesc =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt condimentum rutrum. Praesent quis eros nec lectus consectetur commodo et ac sapien. Vivamus condimentum auctor arcu, ac vulputate tortor vehicula ullamcorper. Morbi imperdiet lacus arcu, vitae pharetra risus placerat sed. Cras ullamcorper at turpis a posuere. Donec porta pretium turpis.';
 
 const projectOne = new Project(
-  'Test title',
+  'Test title1',
   '#',
   'js,html,css',
   testDesc,
@@ -21,25 +21,25 @@ const projectOne = new Project(
   'google.com'
 );
 const projectTwo = new Project(
-  'Test title',
+  'Test title2',
   '#',
-  'js,html,css',
+  'JQuery, Bootstrap, html',
   testDesc,
   'google.com',
   'google.com'
 );
 const projectThree = new Project(
-  'Test title',
+  'Test title3',
   '#',
-  'js,html,css',
+  'React, SASS, pug',
   testDesc,
   'google.com',
   'google.com'
 );
 const projectFour = new Project(
-  'Test title',
+  'Test title4',
   '#',
-  'js,html,css',
+  'Vue, SCSS, html',
   testDesc,
   'google.com',
   'google.com'
