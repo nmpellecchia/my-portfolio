@@ -108,6 +108,15 @@
   opacity: 1;
 }
 
+.swapper-slider:disabled {
+  background: red;
+  font-weight: 100;
+}
+
+.swapper-slider:disabled::before,
+.swapper-slider:disabled::after {
+  border-color: transparent;
+}
 /* Floating animation */
 
 @keyframes floating {

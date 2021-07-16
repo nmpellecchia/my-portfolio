@@ -29,7 +29,7 @@ function Projects(props) {
           </button>
           <p>{rangeVal}</p>
         </div>
-        <ProjectSlide project={props.projects[rangeVal]} index="2" />
+        <ProjectSlide project={props.projects[rangeVal]} />
       </section>
     </div>
   );
@@ -38,10 +38,9 @@ function Projects(props) {
 function ProjectSlide({
   /* destructuring to avoid using props. ... */
   project: { title, img, tools, desc, repo_url, live_url },
-  index,
 }) {
   return (
-    <li className="project-slide" data-key={index}>
+    <li className="project-slide">
       <div className="project-media">
         <p className="project-title">{title}</p>
         <img src={img} alt={title} className="project-img" />

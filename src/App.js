@@ -8,6 +8,8 @@ function App() {
     <div className="App">
       <h1 className="big-title">Projects</h1>
       <Projects projects={projects} />
+      <h1 className="big-title">ToolBox</h1>
+
       {/* BG needs to be the last element and be fixed */}
       <StarrySky />
     </div>
