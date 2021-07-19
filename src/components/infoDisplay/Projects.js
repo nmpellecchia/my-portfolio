@@ -37,7 +37,7 @@ function Projects(props) {
 
 function ProjectSlide({
   /* destructuring to avoid using props. ... */
-  project: { title, img, tools, desc, repo_url, live_url },
+  project: { title, img, tools, desc, repoURL, liveURL },
 }) {
   return (
     <li className="project-slide">
@@ -50,9 +50,9 @@ function ProjectSlide({
         <p className="project-desc">{desc}</p>
       </div>
       <div className="project-buttons">
-        <a href={repo_url}>View repository</a>
+        <a href={repoURL}>View repository</a>
         {/* Only render this btn if the project can be seen live */}
-        live_url && <a href={live_url}>View repository</a>
+        {liveURL && <a href={liveURL}>View Live</a>}
       </div>
     </li>
   );

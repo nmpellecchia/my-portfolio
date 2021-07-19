@@ -42,7 +42,7 @@ const projectFour = new Project(
   'Vue, SCSS, html',
   testDesc,
   'google.com',
-  'google.com'
+  ''
 );
 
 const projects = [projectOne, projectTwo, projectThree, projectFour];

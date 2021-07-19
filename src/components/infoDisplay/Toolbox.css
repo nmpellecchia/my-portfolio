@@ -1,0 +1,25 @@
+/* grid */
+.container-icons {
+  /*  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; */
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.icon {
+  filter: grayscale(100%);
+  transition-duration: 500ms;
+  margin: 0.5rem;
+}
+
+.icon:hover {
+  filter: grayscale(0);
+}
+
+.icon > i {
+  font-size: 5rem;
+}
