@@ -12,6 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 23vw;
+  animation: floating 15s ease-in-out infinite;
 }
 
 h2 {
@@ -29,6 +30,26 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Floating animation */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  33% {
+    transform: translateY(-15px);
+  }
+
+  66% {
+    transform: translateY(15px);
+  }
+  /* It stops 1px before to avoid strange teleports or stopping to long at the starting position */
+  100% {
+    transform: translateY(1px);
+  }
 }
 
 /* .App {
