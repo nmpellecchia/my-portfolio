@@ -20,7 +20,7 @@ function Projects(props) {
           </button>
           <button
             className="swapper-slider swapper-next-slide"
-            disabled={rangeVal == props.projects.length - 1}
+            disabled={rangeVal === props.projects.length - 1}
             onClick={() => {
               setRangeVal(rangeVal + 1);
             }}
