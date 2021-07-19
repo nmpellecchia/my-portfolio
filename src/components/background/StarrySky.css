@@ -1,0 +1,100 @@
+.night-sky {
+  /* Fix the position so the bg follows the scrolling */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* This keeps the element in the bg */
+  z-index: -99;
+  width: 100%;
+  height: 100vh;
+  background: rgb(2, 0, 43);
+  background: linear-gradient(
+    rgba(2, 0, 43, 1) 0%,
+    rgba(11, 79, 83, 1) 62%,
+    rgba(19, 118, 119, 1) 82%,
+    rgba(17, 154, 146, 1) 100%
+  );
+}
+
+.star {
+  /* allows js to randomly position the element */
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 30%;
+  -webkit-box-shadow: 0px 0px 70px 5px rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 70px 5px rgba(255, 255, 255, 0.9);
+}
+
+.shooting-star {
+  position: relative;
+  height: 2px;
+  width: 200px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.7) 65%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border-radius: 30%;
+  /* This will make the star grow from one side, instead from the center */
+  transform-origin: 100% 50%;
+}
+
+/* Animations */
+
+/* Stars */
+@keyframes twinkle {
+  0% {
+    transform: scale(1, 1);
+    background: rgba(255, 255, 255, 0);
+    -webkit-box-shadow: 0px 0px 70px 5px rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 70px 5px rgba(255, 255, 255, 0);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: scale(0.8, 0.8);
+    background: rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 0px 70px 5px rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 70px 5px rgba(255, 255, 255, 0.9);
+    animation-timing-function: ease-out;
+  }
+  80% {
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 0px 70px 5px rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 70px 5px rgba(255, 255, 255, 0.4);
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    -webkit-box-shadow: 0px 0px 70px 5px rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 70px 5px rgba(255, 255, 255, 0);
+    transform: scale(1, 1);
+  }
+}
+
+/* Shooting Stars */
+
+@keyframes falling-trajectory {
+  0% {
+    transform: translate(0, 0) rotateZ(35deg) scaleX(0);
+  }
+
+  3% {
+    transform: translate(150px, 100px) rotateZ(35deg) scaleX(1);
+  }
+
+  10% {
+    transform: translate(300px, 200px) rotateZ(35deg) scaleX(0);
+  }
+
+  11% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(0);
+  }
+}
