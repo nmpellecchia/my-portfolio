@@ -1,15 +1,3 @@
-/* .panel {
-  width: 95%;
-  height: 85%;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(1px);
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 22px 4px rgba(255, 255, 255, 0.33);
-  box-shadow: 0px 0px 22px 4px rgba(255, 255, 255, 0.33);
-  animation: floating 20s ease-in-out infinite;
-}
- */
-
 /* Swapper content. Projects in this case */
 .projects.swapper-items {
   margin: 10px;
@@ -24,19 +12,20 @@
 }
 
 .project-media {
-  background: gray;
+  background: var(--main-color);
   justify-self: center;
-  width: 50%;
+  width: 70%; /* Make it smaller on bigger screens */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 5px solid gray;
+  border: 5px solid var(--main-color);
   animation: floating 10s ease-in-out infinite;
 }
 
 .project-title {
   margin: 0 0 5px 0;
   padding: 0;
+  color: var(--secondary-accent);
   /* width: 100%; */
 }
 
@@ -46,12 +35,31 @@
   min-height: 200px;
 }
 
+.project-info {
+  margin: 0 10px;
+  text-align: justify;
+}
+
 .project-tools {
   text-transform: uppercase;
   text-justify: inter-word;
+  text-decoration: underline;
+  color: var(--accent-color);
 }
 
 /* custom btns (I may cmake this the basic style 4 all btns) */
+
+.swapper-sliders {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.current-slide {
+  margin: 0;
+}
 
 .project-buttons {
   display: flex;
@@ -61,20 +69,20 @@
 .project-buttons > a,
 .swapper-slider {
   padding: 0 5px;
-  border: none;
-  border-radius: 10px;
-  background: grey;
-  color: white;
+  border-style: none solid none;
+  border-width: 2px;
+  background: none;
+  color: var(--white);
   text-transform: uppercase;
+  text-decoration: none;
   font-weight: 100;
-  /* letter-spacing: 0; */
+  font-family: var(--text-font);
   transition-duration: 500ms;
 }
 
 .project-buttons > a:hover,
 .swapper-slider:hover {
   font-weight: 700;
-  /*  letter-spacing: 2px; */
 }
 
 .project-buttons > a::before,
@@ -85,7 +93,7 @@
   content: '';
   margin: 5px auto;
   width: 0;
-  border: 1px solid white;
+  border: 1px solid var(--white);
   transition-duration: 350ms;
   opacity: 0;
 }
@@ -100,11 +108,26 @@
 }
 
 .swapper-slider:disabled {
-  background: red;
+  color: var(--secondary-color);
   font-weight: 100;
 }
 
 .swapper-slider:disabled::before,
 .swapper-slider:disabled::after {
   border-color: transparent;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    font-size: 1.3rem;
+  }
+
+  .project-media {
+    width: 50%;
+  }
+
+  .project-buttons > a,
+  .swapper-slider {
+    font-size: 1rem;
+  }
 }

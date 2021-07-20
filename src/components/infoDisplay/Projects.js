@@ -18,6 +18,9 @@ function Projects(props) {
           >
             Previous
           </button>
+          <p className="current-slide">
+            {rangeVal + 1} / {props.projects.length}
+          </p>
           <button
             className="swapper-slider swapper-next-slide"
             disabled={rangeVal === props.projects.length - 1}
@@ -27,7 +30,6 @@ function Projects(props) {
           >
             Next
           </button>
-          <p>{rangeVal}</p>
         </div>
         <ProjectSlide project={props.projects[rangeVal]} />
       </section>

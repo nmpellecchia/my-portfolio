@@ -9,7 +9,7 @@ function Contact() {
         <div className="contacts-outer">
           <h2 className="contact-txt">
             Want to talk or work with me?
-            <a href="mailto:nicolasmpellecchia@gmail.com">Send me an email</a>
+            <a href="mailto:nicolasmpellecchia@gmail.com"> Send me an email </a>
             or a message on these online spaces!
           </h2>
           <ul className="contact-socials">
