@@ -13,7 +13,7 @@ function App() {
       {<h1 className="big-title">ToolBox</h1>}
       <Toolbox />
       <Contact />
-      {/* BG needs to be the last element and be fixed */}
+      {/* BG needs to be the last element and pos. fixed */}
       <StarrySky />
     </div>
   );

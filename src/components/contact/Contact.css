@@ -40,11 +40,14 @@ footer::before {
 
 .contacts-outer {
   background: #000;
-  height: 20rem;
+  height: 15rem;
 }
 
 .contact-socials {
   display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+  margin-right: 15px;
 }
 
 .contact-socials > li {

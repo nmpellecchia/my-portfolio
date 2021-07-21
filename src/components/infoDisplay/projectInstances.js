@@ -1,3 +1,5 @@
+import knightTour from './projectImgs/knight-tour.png';
+
 class Project {
   constructor(title, img, tools, desc, repoURL, liveURL) {
     this.title = title;
@@ -9,39 +11,36 @@ class Project {
   }
 }
 
-const testDesc =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt condimentum rutrum. Praesent quis eros nec lectus consectetur commodo et ac sapien. Vivamus condimentum auctor arcu, ac vulputate tortor vehicula ullamcorper. Morbi imperdiet lacus arcu, vitae pharetra risus placerat sed. Cras ullamcorper at turpis a posuere. Donec porta pretium turpis.';
-
 const projectOne = new Project(
-  'Test title1',
-  '#',
-  'js,html,css',
-  testDesc,
-  'google.com',
-  'google.com'
+  "Warnsdoff's Knight Tour",
+  knightTour,
+  'js, html, css',
+  "Interactive site where you can learn and try yourself what's a Knight Tour and how to solve it",
+  'https://github.com/nmpellecchia/Knight-Tour',
+  'https://nmpellecchia.github.io/Knight-Tour/'
 );
 const projectTwo = new Project(
-  'Test title2',
+  'Random Recipes from TheMealDB',
   '#',
-  'JQuery, Bootstrap, html',
-  testDesc,
-  'google.com',
-  'google.com'
+  'js, html, css, rest api',
+  'In this website you can get a random recipe every time you enter. You can also, of course, choose a category and the site will give you the dish, ingredients and preparations methods!',
+  'https://github.com/nmpellecchia/recipe-site',
+  'https://nmpellecchia.github.io/recipe-site/'
 );
 const projectThree = new Project(
-  'Test title3',
+  'CRT style Trivia',
   '#',
-  'React, SASS, pug',
-  testDesc,
-  'google.com',
-  'google.com'
+  'js, html, css, rest api',
+  "Want to test your knowledge? Then this site is for you! Inside what seems like an old terminal you can choose between three difficulties and try to answer the question the best you can all the times you want.  's",
+  'https://github.com/nmpellecchia/Retro-looking-Trivia',
+  'https://nmpellecchia.github.io/Retro-looking-Trivia/'
 );
 const projectFour = new Project(
-  'Test title4',
+  'Reading List with Flask API',
   '#',
-  'Vue, SCSS, html',
-  testDesc,
-  'google.com',
+  'jquery, html, bootstrap, flask',
+  "A handmade API made using the Python library 'Flask'. You can add, delete and edit the books you want!",
+  'https://github.com/nmpellecchia/Reading-List',
   ''
 );
 

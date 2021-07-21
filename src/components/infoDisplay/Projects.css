@@ -14,11 +14,12 @@
 .project-media {
   background: var(--main-color);
   justify-self: center;
-  width: 70%; /* Make it smaller on bigger screens */
+  width: 75%; /* Make it smaller on bigger screens */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 5px solid var(--main-color);
+  border-radius: 10px;
   animation: floating 10s ease-in-out infinite;
 }
 
@@ -31,8 +32,9 @@
 
 .project-img {
   align-self: center;
-  min-width: 100%;
-  min-height: 200px;
+  max-width: 100%;
+  max-height: 600px;
+  display: block;
 }
 
 .project-info {
@@ -123,7 +125,7 @@
   }
 
   .project-media {
-    width: 50%;
+    width: 60%;
   }
 
   .project-buttons > a,

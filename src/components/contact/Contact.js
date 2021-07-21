@@ -14,12 +14,12 @@ function Contact() {
           </h2>
           <ul className="contact-socials">
             <li>
-              <a href="" rel="external">
+              <a href="https://codepen.io/nicolas-pellecchia" rel="external">
                 <i className="devicon-codepen-plain"></i>
               </a>
             </li>
             <li>
-              <a href="" rel="external">
+              <a href="https://github.com/nmpellecchia" rel="external">
                 <i className="devicon-github-original"></i>
               </a>
             </li>
