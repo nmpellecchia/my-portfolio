@@ -2,7 +2,8 @@ import { React, useState } from 'react';
 import './NavBar.css';
 
 function NavBar() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
+  const items = ['home', 'projects', 'toolbox', 'about', 'contact'];
   return (
     <nav>
       <div className="menu-icon" onClick={() => setShow(!show)}>
@@ -10,27 +11,10 @@ function NavBar() {
         <div className={`bar-2 ${show ? 'active' : ''}`}></div>
         <div className={`bar-3 ${show ? 'active' : ''}`}></div>
       </div>
-      <div className="nav-list">
-        {/* <a className="nav-item" href="#">
-          Home
-        </a>
-        <a className="nav-item" href="#projects">
-          Projects
-        </a>
-        <a className="nav-item" href="#toolbox">
-          Toolbox
-        </a>
-        <a className="nav-item" href="#about">
-          About
-        </a>
-        <a className="nav-item" href="#contact">
-          Contact
-        </a> */}
-        <NavItem item="home" show={show} index={1} />
-        <NavItem item="projects" show={show} index={2} />
-        <NavItem item="toolbox" show={show} index={3} />
-        <NavItem item="about" show={show} index={4} />
-        <NavItem item="contact" show={show} index={5} />
+      <div className="nav-list" onClick={() => setShow(!show)}>
+        {items.map((item, index) => {
+          return <NavItem item={item} index={index} show={show} />;
+        })}
       </div>
     </nav>
   );
