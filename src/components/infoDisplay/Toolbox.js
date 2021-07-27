@@ -4,7 +4,7 @@ import './Toolbox.css';
 function Toolbox() {
   return (
     <div className="container">
-      <section>
+      <section id="toolbox">
         <h2>
           I like to learn and try new things. These are the tools I've been
           using until now:

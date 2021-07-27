@@ -3,7 +3,6 @@
 } */
 
 .big-name {
-  /* height: 50%; */
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -67,11 +66,15 @@
 }
 
 @media only screen and (min-width: 600px) {
+  .big-name {
+    height: 90%;
+  }
+
   .name.last-name {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 
   .name.first-name {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 }

@@ -7,7 +7,7 @@ function Projects(props) {
   return (
     <div className="container">
       {/* use props.children to pass children */}
-      <section>
+      <section id="projects">
         <div className="swapper-sliders">
           <button
             className="swapper-slider swapper-previous-slide"

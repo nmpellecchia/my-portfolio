@@ -4,7 +4,7 @@ import './About.css';
 function AboutMe() {
   return (
     <div className="container">
-      <section>
+      <section id="about">
         <p className="about-txt">
           Hello, welcome to my portfolio! My name is Nicolas Pellecchia and I'm
           a web developer from Buenos Aires, Argentina.

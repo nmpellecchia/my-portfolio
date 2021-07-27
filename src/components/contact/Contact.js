@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div className="container full-width">
       {/* <h1 className="big-title">Contact</h1> */}
-      <footer>
+      <footer id="contact">
         <div className="contacts-outer">
           <h2 className="contact-txt">
             Want to talk or work with me?
