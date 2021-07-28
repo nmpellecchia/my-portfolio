@@ -11,6 +11,7 @@ function Projects(props) {
         <div className="swapper-sliders">
           <button
             className="swapper-slider swapper-previous-slide"
+            /* Disable the button if no more projects to show */
             disabled={rangeVal < 1}
             onClick={() => {
               setRangeVal(rangeVal - 1);
