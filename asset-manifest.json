@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.5cba1880.chunk.css",
+    "main.js": "/my-portfolio/static/js/main.1400b05f.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.1400b05f.chunk.js.map",
+    "runtime-main.js": "/my-portfolio/static/js/runtime-main.99e5f028.js",
+    "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.99e5f028.js.map",
+    "static/js/2.685a8cfe.chunk.js": "/my-portfolio/static/js/2.685a8cfe.chunk.js",
+    "static/js/2.685a8cfe.chunk.js.map": "/my-portfolio/static/js/2.685a8cfe.chunk.js.map",
+    "static/js/3.06eba91d.chunk.js": "/my-portfolio/static/js/3.06eba91d.chunk.js",
+    "static/js/3.06eba91d.chunk.js.map": "/my-portfolio/static/js/3.06eba91d.chunk.js.map",
+    "index.html": "/my-portfolio/index.html",
+    "static/css/main.5cba1880.chunk.css.map": "/my-portfolio/static/css/main.5cba1880.chunk.css.map",
+    "static/js/2.685a8cfe.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.685a8cfe.chunk.js.LICENSE.txt",
+    "static/media/knight-tour.98919463.png": "/my-portfolio/static/media/knight-tour.98919463.png",
+    "static/media/quiz.8d4a9c05.png": "/my-portfolio/static/media/quiz.8d4a9c05.png",
+    "static/media/reading-list.1b09fd3e.png": "/my-portfolio/static/media/reading-list.1b09fd3e.png",
+    "static/media/recipes.84ef6de9.png": "/my-portfolio/static/media/recipes.84ef6de9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.99e5f028.js",
+    "static/js/2.685a8cfe.chunk.js",
+    "static/css/main.5cba1880.chunk.css",
+    "static/js/main.1400b05f.chunk.js"
+  ]
+}
