@@ -1,0 +1,145 @@
+#projects {
+  align-items: center;
+}
+
+/* Swapper content. Projects in this case */
+.projects.swapper-items {
+  margin: 10px;
+  padding: 0;
+}
+
+.project-slide {
+  display: grid;
+  grid-template-columns: 100fr;
+  justify-content: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.project-media {
+  background: var(--main-color);
+  justify-self: center;
+  width: 75%; /* Make it smaller on bigger screens */
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 5px solid var(--main-color);
+  border-radius: 10px;
+  animation: floating 10s ease-in-out infinite;
+}
+
+.project-title {
+  margin: 0 0 5px 0;
+  padding: 0;
+  color: var(--secondary-accent);
+  /* width: 100%; */
+}
+
+.project-img {
+  align-self: center;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-info {
+  margin: 0 10px;
+  text-align: justify;
+}
+
+.project-tools {
+  text-transform: uppercase;
+  text-justify: inter-word;
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+/* custom btns (I may cmake this the basic style 4 all btns) */
+
+.swapper-sliders {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.current-slide {
+  margin: 0;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-buttons > a,
+.swapper-slider {
+  padding: 0 5px;
+  border-style: none solid none;
+  border-width: 2px;
+  background: none;
+  color: var(--white);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 100;
+  font-family: var(--text-font);
+  transition-duration: 500ms;
+}
+
+.project-buttons > a:hover,
+.swapper-slider:hover {
+  font-weight: 700;
+}
+
+.project-buttons > a::before,
+.project-buttons > a::after,
+.swapper-slider::before,
+.swapper-slider::after {
+  display: block;
+  content: '';
+  margin: 5px auto;
+  width: 0;
+  border: 1px solid var(--white);
+  transition-duration: 350ms;
+  opacity: 0;
+}
+
+.project-buttons > a:hover::before,
+.project-buttons > a:hover::after,
+.swapper-slider:hover::before,
+.swapper-slider:hover::after {
+  width: 70%;
+  transition-duration: 350ms;
+  opacity: 1;
+}
+
+.swapper-slider:disabled {
+  color: var(--secondary-color);
+  font-weight: 100;
+}
+
+.swapper-slider:disabled::before,
+.swapper-slider:disabled::after {
+  border-color: transparent;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    font-size: 1.3rem;
+  }
+
+  .project-slide {
+    gap: 0;
+  }
+
+  .project-media {
+    width: 38%;
+  }
+
+  .project-buttons > a,
+  .swapper-slider {
+    font-size: 1rem;
+  }
+}

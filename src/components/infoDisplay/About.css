@@ -1,0 +1,43 @@
+section {
+  height: 90%;
+  margin: 10px;
+  align-items: flex-start;
+}
+
+section > * {
+  margin: 0;
+  padding: 1rem;
+}
+
+.big-txt {
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 1.3rem;
+  /* font-weight: 700; */
+  align-self: center;
+  text-align: center;
+  color: var(--accent-color);
+  padding: 0;
+}
+
+.arrow-down {
+  align-self: center;
+}
+
+.arrow-down {
+  animation: pointing 5s ease-in infinite;
+}
+
+@keyframes pointing {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

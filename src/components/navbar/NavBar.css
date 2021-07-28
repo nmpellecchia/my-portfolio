@@ -1,0 +1,108 @@
+nav {
+  /* Better compatibility than sticky */
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* Ignore clicks on this element. So user can interact with elements behind */
+  pointer-events: none;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 5px 5px 20px 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  /* Restores the event listening on this element */
+  pointer-events: auto;
+}
+
+.bar-1,
+.bar-2,
+.bar-3 {
+  width: 25px;
+  height: 2px;
+  background: white;
+  margin: 3px 0;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.bar-1.active {
+  transform: rotate(45deg) translate(6px, 5px);
+}
+.bar-2.active {
+  transform: translateX(50px);
+  opacity: 0;
+}
+.bar-3.active {
+  transform: rotate(-45deg) translate(6px, -5px);
+}
+
+.nav-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* Restores the event listening on this element */
+  pointer-events: auto;
+}
+
+.nav-item:first-child {
+  border-radius: 50px 0 0 0;
+}
+
+.nav-item:last-child {
+  border-radius: 0 0 0 50px;
+}
+
+.nav-item {
+  background: #1e3357cc;
+  color: var(--white);
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 2rem;
+}
+
+.nav-item:hover {
+  background: #fbfb55cc;
+  color: var(--main-color);
+}
+
+@media only screen and (min-width: 600px) {
+  .menu-icon {
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 10px 10px 50px 0;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  .bar-1,
+  .bar-2,
+  .bar-3 {
+    width: 45px;
+    height: 5px;
+    background: white;
+    margin: 5px 0;
+    transition: 500ms;
+  }
+
+  .bar-1.active {
+    transform: rotate(45deg) translate(11px, 10px);
+  }
+  .bar-2.active {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  .bar-3.active {
+    transform: rotate(-45deg) translate(10px, -10px);
+  }
+}

@@ -1,8 +1,71 @@
+:root {
+  --main-color: #02012a;
+  --secondary-color: #1e3357;
+  --accent-color: #fbfb55;
+  --secondary-accent: #82b957;
+  --white: #ececc3;
+  --title-font: 'Tourney', cursive;
+  --text-font: 'Play', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   height: 100vh;
   padding: 0;
   margin: 0;
+  color: var(--white);
+  font-family: var(--text-font);
+}
+
+.big-title {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20vw;
+  animation: floating 15s ease-in-out infinite;
+  font-family: var(--title-font);
+}
+
+h2 {
+  margin-top: 0;
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 200;
+  align-self: flex-start;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Floating animation */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  33% {
+    transform: translateY(-15px);
+  }
+
+  66% {
+    transform: translateY(15px);
+  }
+  /* It stops 1px before to avoid strange teleports or stopping to long at the starting position */
+  100% {
+    transform: translateY(1px);
+  }
 }
 
 /* .App {

@@ -2,6 +2,7 @@ import React from 'react';
 import './StarrySky.css';
 
 function StarrySky() {
+  /* High number. better have function than hardcoding the amount */
   const addStars = amount => {
     const stars = [];
     for (let i = 0; i <= amount; i++) {

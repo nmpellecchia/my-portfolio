@@ -1,0 +1,64 @@
+import { React, useState } from 'react';
+import './Projects.css';
+
+function Projects(props) {
+  const [rangeVal, setRangeVal] = useState(0);
+
+  return (
+    <div className="container">
+      {/* use props.children to pass children */}
+      <section id="projects">
+        <div className="swapper-sliders">
+          <button
+            className="swapper-slider swapper-previous-slide"
+            /* Disable the button if no more projects to show */
+            disabled={rangeVal < 1}
+            onClick={() => {
+              setRangeVal(rangeVal - 1);
+            }}
+          >
+            Previous
+          </button>
+          <p className="current-slide">
+            {rangeVal + 1} / {props.projects.length}
+          </p>
+          <button
+            className="swapper-slider swapper-next-slide"
+            disabled={rangeVal === props.projects.length - 1}
+            onClick={() => {
+              setRangeVal(rangeVal + 1);
+            }}
+          >
+            Next
+          </button>
+        </div>
+        <ProjectSlide project={props.projects[rangeVal]} />
+      </section>
+    </div>
+  );
+}
+
+function ProjectSlide({
+  /* destructuring to avoid using props. ... */
+  project: { title, img, tools, desc, repoURL, liveURL },
+}) {
+  return (
+    <li className="project-slide">
+      <div className="project-media">
+        <p className="project-title">{title}</p>
+        <img src={img} alt={title} className="project-img" />
+      </div>
+      <div className="project-info">
+        <p className="project-tools">{tools}</p>
+        <p className="project-desc">{desc}</p>
+      </div>
+      <div className="project-buttons">
+        <a href={repoURL}>View repository</a>
+        {/* Only render this btn if the project can be seen live */}
+        {liveURL && <a href={liveURL}>View Live</a>}
+      </div>
+    </li>
+  );
+}
+
+export default Projects;

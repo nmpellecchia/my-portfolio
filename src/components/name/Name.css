@@ -1,0 +1,80 @@
+/* .container {
+  display: block;
+} */
+
+.big-name {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  animation: floating 15s ease-in-out infinite;
+  animation-fill-mode: fowards;
+}
+
+.name.big-letters {
+  justify-self: self-end;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  stroke: var(--accent-color);
+  /* animation */
+  stroke-dashoffset: 221px;
+  stroke-dasharray: 211;
+
+  animation: draw 3s linear 2s;
+  animation-fill-mode: forwards;
+}
+
+.name.last-name {
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
+  margin: 0;
+  align-self: center;
+  font-size: 3rem;
+  opacity: 0;
+  transform: translateY(-5px);
+  animation: appear 3s ease-in 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.name.first-name {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  margin: 0;
+  align-self: center;
+  font-size: 3rem;
+  opacity: 0;
+  transform: translateY(-5px);
+  animation: appear 3s ease-in 2.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .big-name {
+    height: 90%;
+  }
+
+  .name.last-name {
+    font-size: 5rem;
+  }
+
+  .name.first-name {
+    font-size: 5rem;
+  }
+}
