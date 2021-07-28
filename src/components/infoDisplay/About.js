@@ -29,8 +29,8 @@ function AboutMe() {
             d="m 50 1 v 48 m -11 -11 l 11 11 l 11 -11"
             fill="none"
             stroke="white"
-            stroke-linecap="round"
-            stroke-width="5"
+            strokeLinecap="round"
+            strokeWidth="5"
           />
         </svg>
       </section>

@@ -12,12 +12,12 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      {/* <MyName />
+      <MyName />
       <h1 className="big-title">Projects</h1>
       <Projects projects={projects} />
       <h1 className="big-title">ToolBox</h1>
       <Toolbox />
-      <h1 className="big-title">About me</h1> */}
+      <h1 className="big-title">About me</h1>
       <AboutMe />
       <Contact />
       {/* BG needs to be the last element and pos. fixed */}

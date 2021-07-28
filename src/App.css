@@ -7,6 +7,9 @@
   --title-font: 'Tourney', cursive;
   --text-font: 'Play', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   width: 100%;

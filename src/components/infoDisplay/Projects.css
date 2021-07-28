@@ -1,3 +1,7 @@
+#projects {
+  align-items: center;
+}
+
 /* Swapper content. Projects in this case */
 .projects.swapper-items {
   margin: 10px;
@@ -7,6 +11,7 @@
 .project-slide {
   display: grid;
   grid-template-columns: 100fr;
+  justify-content: center;
   gap: 1rem;
   text-decoration: none;
 }
@@ -15,6 +20,7 @@
   background: var(--main-color);
   justify-self: center;
   width: 75%; /* Make it smaller on bigger screens */
+  max-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,7 +39,7 @@
 .project-img {
   align-self: center;
   max-width: 100%;
-  max-height: 600px;
+  height: auto;
   display: block;
 }
 
@@ -124,8 +130,12 @@
     font-size: 1.3rem;
   }
 
+  .project-slide {
+    gap: 0;
+  }
+
   .project-media {
-    width: 60%;
+    width: 38%;
   }
 
   .project-buttons > a,
