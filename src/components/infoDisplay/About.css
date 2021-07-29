@@ -12,7 +12,6 @@ section > * {
 .big-txt {
   font-family: 'Rubik Mono One', sans-serif;
   font-size: 1.3rem;
-  /* font-weight: 700; */
   align-self: center;
   text-align: center;
   color: var(--accent-color);

@@ -24,7 +24,10 @@ function Contact() {
               </a>
             </li>
             <li>
-              <a href="" rel="external">
+              <a
+                href="https://www.linkedin.com/in/nicolas-pellecchia-440a01217/"
+                rel="external"
+              >
                 <i className="devicon-linkedin-plain"></i>
               </a>
             </li>

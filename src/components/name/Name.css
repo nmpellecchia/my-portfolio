@@ -1,13 +1,8 @@
-/* .container {
-  display: block;
-} */
-
 .big-name {
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
-  animation: floating 15s ease-in-out infinite;
   animation-fill-mode: fowards;
 }
 
